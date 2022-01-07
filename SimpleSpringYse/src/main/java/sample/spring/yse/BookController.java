@@ -66,7 +66,20 @@ public class BookController {
 		} else {
 			mav = this.update(map);
 		}
-
+		return mav;
+	}
+	
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public ModelAndView deletePost(@RequestParam Map<String, Object> map) {
+		ModelAndView mav = new ModelAndView();
+		
+		boolean isDeleteSuccess = this.bookService.remove(map);
+		if (isDeleteSuccess) {
+			mav.setViewName("redirect:/list");
+		}else {
+			String bookId = map.get("bookId").toString();
+			mav.setViewName("redirect:/detail?bookId=" + bookId);
+		}
 		return mav;
 	}
 
