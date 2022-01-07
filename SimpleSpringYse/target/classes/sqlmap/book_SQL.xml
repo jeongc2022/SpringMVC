@@ -17,11 +17,23 @@
         title,
         category,
         price,
- insert_date
+ 	insert_date
         from
         book
         where
         book_id = #{bookId}   
-    ]]>
-</select>
+    	]]>
+	</select>
+
+	<update id="update" parameterType="hashMap">
+	<![CDATA[
+	update book set
+	title = #{title},
+	category = #{category}
+	price = #{price}
+	where
+	book_id = #{bookId}
+	]]>
+	</update>
+
 </mapper>

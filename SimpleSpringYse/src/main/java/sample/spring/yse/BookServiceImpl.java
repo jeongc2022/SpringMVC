@@ -23,4 +23,9 @@ public class BookServiceImpl implements BookService {
 	public Map<String, Object> detail(Map<String, Object> map) {
 		return this.bookDao.selectDetail(map);
 	}
+	
+	public boolean edit(Map<String, Object> map) {
+		int affectRowCount = this.bookDao.update(map);
+		return affectRowCount == 1;
+	}
 }
