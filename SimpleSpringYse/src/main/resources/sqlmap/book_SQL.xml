@@ -35,4 +35,12 @@
 		book_id = #{bookId}  
 		]]>  
 	</update>    
+	
+	<delete id="delete" parameterType="hashMap">
+		<![CDATA[
+		delete from book
+		where
+		book_id = #{bookId}
+		]]>
+	</delete>
 </mapper>

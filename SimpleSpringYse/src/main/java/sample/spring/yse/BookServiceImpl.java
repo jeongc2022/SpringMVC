@@ -28,6 +28,6 @@ public class BookServiceImpl implements BookService {
 	public boolean edit(Map<String, Object> map) {  
 	int affectRowCount = this.bookDao.update(map);  
 	return affectRowCount == 1;  
-
-	} 
+	}
+	
 }
