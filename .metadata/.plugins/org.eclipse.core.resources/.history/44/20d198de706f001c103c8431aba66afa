@@ -1,0 +1,11 @@
+package threeset10;
+
+public class Student {
+	public String id;
+	public int scroe;
+	
+	public Student(String id, int score) {
+		this.id = id;
+		this.score = score;
+	}
+}

@@ -1,0 +1,7 @@
+package ex07;
+
+public class BoardDao {
+	public List<Board> getBoardList() {
+		List<Board> list = new ArrayList<Board>();
+	}
+}
